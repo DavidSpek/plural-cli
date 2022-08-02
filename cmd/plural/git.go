@@ -5,7 +5,7 @@ import (
 	"os/exec"
 
 	"github.com/pluralsh/plural/pkg/utils/git"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func handleRepair(c *cli.Context) error {

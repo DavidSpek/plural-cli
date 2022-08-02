@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 
 	plural "github.com/pluralsh/plural/cmd/plural"
 	"github.com/pluralsh/plural/pkg/config"

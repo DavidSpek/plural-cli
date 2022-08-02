@@ -6,7 +6,7 @@ import (
 
 	"github.com/olekukonko/tablewriter"
 	"github.com/pluralsh/plural/pkg/config"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func configCommands() []cli.Command {

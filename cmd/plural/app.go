@@ -4,7 +4,7 @@ import (
 	"os/exec"
 
 	tm "github.com/buger/goterm"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 
 	"github.com/pluralsh/plural/pkg/application"
 	"github.com/pluralsh/plural/pkg/config"

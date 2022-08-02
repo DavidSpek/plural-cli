@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/olekukonko/tablewriter"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func (p *Plural) apiCommands() []cli.Command {
@@ -12,7 +12,7 @@ func (p *Plural) apiCommands() []cli.Command {
 		{
 			Name:  "list",
 			Usage: "lists forge resources",
-			Subcommands: []cli.Command{
+			Subcommands: []*cli.Command{
 				{
 					Name:      "installations",
 					Usage:     "lists your installations",

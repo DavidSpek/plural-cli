@@ -10,7 +10,7 @@ import (
 	"github.com/pluralsh/plural/pkg/provider"
 	"github.com/pluralsh/plural/pkg/utils"
 	"github.com/pluralsh/plural/pkg/wkspace"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func workspaceCommands() []cli.Command {

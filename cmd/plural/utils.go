@@ -13,7 +13,7 @@ import (
 	"github.com/pluralsh/plural/pkg/utils"
 	"github.com/pluralsh/plural/pkg/utils/pathing"
 	"github.com/thoas/go-funk"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 	"gopkg.in/yaml.v2"
 )
 

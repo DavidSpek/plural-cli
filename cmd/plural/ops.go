@@ -7,7 +7,7 @@ import (
 	"github.com/olekukonko/tablewriter"
 	"github.com/pluralsh/plural/pkg/provider"
 	"github.com/pluralsh/plural/pkg/utils"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func (p *Plural) opsCommands() []cli.Command {

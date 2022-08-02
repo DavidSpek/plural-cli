@@ -9,7 +9,7 @@ import (
 	"github.com/pluralsh/plural/pkg/bundle"
 	"github.com/pluralsh/plural/pkg/manifest"
 	"github.com/pluralsh/plural/pkg/utils"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func (p *Plural) bundleCommands() []cli.Command {

@@ -16,7 +16,7 @@ import (
 	"github.com/pluralsh/plural/pkg/utils"
 	"github.com/pluralsh/plural/pkg/utils/pathing"
 	"github.com/pluralsh/plural/pkg/wkspace"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func handleInit(c *cli.Context) error {

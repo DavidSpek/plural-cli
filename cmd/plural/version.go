@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/pluralsh/plural/pkg/utils"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 var (

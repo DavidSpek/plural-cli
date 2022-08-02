@@ -6,7 +6,7 @@ import (
 	"github.com/pluralsh/plural/pkg/output"
 	"github.com/pluralsh/plural/pkg/utils"
 	"github.com/pluralsh/plural/pkg/utils/pathing"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func outputCommands() []cli.Command {

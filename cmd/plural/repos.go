@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 
 	"github.com/pluralsh/plural/pkg/api"
 	"github.com/pluralsh/plural/pkg/format"

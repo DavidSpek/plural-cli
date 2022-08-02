@@ -10,7 +10,7 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/mitchellh/go-homedir"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 
 	"github.com/pluralsh/plural/pkg/crypto"
 	"github.com/pluralsh/plural/pkg/kubernetes"

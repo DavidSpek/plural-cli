@@ -39,7 +39,6 @@ require (
 	github.com/pluralsh/plural-operator v0.1.4
 	github.com/rodaine/hclencoder v0.0.1
 	github.com/thoas/go-funk v0.9.1
-	github.com/urfave/cli v1.22.2
 	github.com/urfave/cli/v2 v2.11.1
 	github.com/xanzy/go-gitlab v0.65.0
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa
@@ -82,6 +81,7 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/vektah/gqlparser/v2 v2.4.6 // indirect
+	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 )
 
 require (
