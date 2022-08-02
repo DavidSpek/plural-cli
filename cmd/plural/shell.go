@@ -11,8 +11,8 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func shellCommands() []cli.Command {
-	return []cli.Command{
+func shellCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:   "sync",
 			Usage:  "syncs the setup in your cloud shell locally",

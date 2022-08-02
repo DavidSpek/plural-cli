@@ -11,8 +11,8 @@ import (
 	"github.com/pluralsh/plural/pkg/utils"
 )
 
-func (p *Plural) reposCommands() []cli.Command {
-	return []cli.Command{
+func (p *Plural) reposCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "unlock",
 			Usage:     "unlocks installations in a repo that have breaking changes",

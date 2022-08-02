@@ -12,8 +12,8 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func (p *Plural) bundleCommands() []cli.Command {
-	return []cli.Command{
+func (p *Plural) bundleCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "list",
 			Usage:     "lists bundles for a repository",

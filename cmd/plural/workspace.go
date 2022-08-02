@@ -13,8 +13,8 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func workspaceCommands() []cli.Command {
-	return []cli.Command{
+func workspaceCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:   "kube-init",
 			Usage:  "generates kubernetes credentials for this subworkspace",

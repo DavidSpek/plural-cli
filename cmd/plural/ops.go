@@ -10,8 +10,8 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func (p *Plural) opsCommands() []cli.Command {
-	return []cli.Command{
+func (p *Plural) opsCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "terminate",
 			Usage:     "terminates a worker node in your cluster",

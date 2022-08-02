@@ -9,8 +9,8 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func outputCommands() []cli.Command {
-	return []cli.Command{
+func outputCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "terraform",
 			Usage:     "generates terraform output",

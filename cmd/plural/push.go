@@ -21,8 +21,8 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func (p *Plural) pushCommands() []cli.Command {
-	return []cli.Command{
+func (p *Plural) pushCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "terraform",
 			Usage:     "pushes a terraform module",

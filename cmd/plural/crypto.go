@@ -47,8 +47,8 @@ const gitignore = `/**/.terraform
 .vscode
 `
 
-func cryptoCommands() []cli.Command {
-	return []cli.Command{
+func cryptoCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:   "encrypt",
 			Usage:  "encrypts stdin and writes to stdout",

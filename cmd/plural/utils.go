@@ -17,8 +17,8 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-func utilsCommands() []cli.Command {
-	return []cli.Command{
+func utilsCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "image-bump",
 			ArgsUsage: "CHART",
