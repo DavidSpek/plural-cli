@@ -47,12 +47,12 @@ func (p *Plural) pushCommands() []*cli.Command {
 			ArgsUsage: "path/to/def.yaml REPO",
 			Action:    p.handleArtifact,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "platform",
 					Value: "mac",
 					Usage: "name of the OS this binary is built for",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "arch",
 					Value: "amd64",
 					Usage: "machine architecture the binary is compatible with",

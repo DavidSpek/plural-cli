@@ -84,7 +84,7 @@ func cryptoCommands() []*cli.Command {
 			Usage:  "generates a random string",
 			Action: randString,
 			Flags: []cli.Flag{
-				cli.IntFlag{
+				&cli.IntFlag{
 					Name:  "len",
 					Usage: "the length of the string to generate",
 					Value: 32,
@@ -106,7 +106,7 @@ func cryptoCommands() []*cli.Command {
 			Usage:     "allows a list of plural users to decrypt this repository",
 			ArgsUsage: "",
 			Flags: []cli.Flag{
-				cli.StringSliceFlag{
+				&cli.StringSliceFlag{
 					Name:  "email",
 					Usage: "a email to share with (multiple allowed)",
 				},
@@ -117,7 +117,7 @@ func cryptoCommands() []*cli.Command {
 			Name:  "setup-keys",
 			Usage: "creates an age keypair, and uploads the public key to plural for use in plural crypto share",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "name",
 					Usage: "a name for the key",
 				},

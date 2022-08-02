@@ -29,11 +29,11 @@ func (p *Plural) reposCommands() []*cli.Command {
 			Usage:     "list available repositories to install",
 			ArgsUsage: "",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "query",
 					Usage: "string to search by",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "format",
 					Usage: "format to print the repositories out, eg csv or default is table",
 				},

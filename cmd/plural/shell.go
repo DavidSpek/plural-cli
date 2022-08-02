@@ -18,11 +18,11 @@ func shellCommands() []*cli.Command {
 			Usage:  "syncs the setup in your cloud shell locally",
 			Action: handleShellSync,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "endpoint",
 					Usage: "the endpoint for the plural installation you're working with",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "service-account",
 					Usage: "email for the service account you'd like to use for this workspace",
 				},

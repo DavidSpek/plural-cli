@@ -5,19 +5,19 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func linkCommands() []cli.Command {
-	return []cli.Command{
+func linkCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "link",
 			Usage:     "links a local package into an installation repo",
 			ArgsUsage: "TOOL REPO",
 			Action:    handleLink,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "name, n",
 					Usage: "the name of the artifact to link",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "path, f",
 					Usage: "local path to that artifact (can be relative)",
 				},

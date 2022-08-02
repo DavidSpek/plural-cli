@@ -9,7 +9,7 @@ import (
 	"github.com/pluralsh/plural/pkg/bundle"
 	"github.com/pluralsh/plural/pkg/manifest"
 	"github.com/pluralsh/plural/pkg/utils"
-	cli "github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v2"
 )
 
 func (p *Plural) bundleCommands() []*cli.Command {
@@ -25,7 +25,7 @@ func (p *Plural) bundleCommands() []*cli.Command {
 			Usage:     "installs a bundle and writes the configuration to this installation's context",
 			ArgsUsage: "REPO NAME",
 			Flags: []cli.Flag{
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "refresh",
 					Usage: "re-enter the configuration for this bundle",
 				},

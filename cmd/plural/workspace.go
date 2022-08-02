@@ -25,11 +25,11 @@ func workspaceCommands() []*cli.Command {
 			Usage:     "upgrade/installs the helm chart for this subworkspace",
 			ArgsUsage: "NAME",
 			Flags: []cli.Flag{
-				cli.StringSliceFlag{
+				&cli.StringSliceFlag{
 					Name:  "skip",
 					Usage: "helm sub-chart to skip. can be passed multiple times",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "wait",
 					Usage: "have helm wait until all pods are in ready state",
 				},

@@ -24,11 +24,11 @@ func utilsCommands() []*cli.Command {
 			ArgsUsage: "CHART",
 			Usage:     "Bumps a chart's image tag",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "path",
 					Usage: "path to tag in helm values file",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "tag",
 					Usage: "the image tag to set to",
 				},

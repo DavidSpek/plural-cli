@@ -15,7 +15,7 @@ import (
 )
 
 func init() {
-	cli.BashCompletionFlag = cli.BoolFlag{Name: "compgen", Hidden: true}
+	cli.BashCompletionFlag = &cli.BoolFlag{Name: "compgen", Hidden: true}
 }
 
 const ApplicationName = "plural"
@@ -36,8 +36,8 @@ func (p *Plural) InitKube() error {
 	return nil
 }
 
-func (p *Plural) getCommands() []cli.Command {
-	return []cli.Command{
+func (p *Plural) getCommands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:    "version",
 			Aliases: []string{"v", "vsn"},
@@ -49,11 +49,11 @@ func (p *Plural) getCommands() []cli.Command {
 			Aliases: []string{"b"},
 			Usage:   "builds your workspace",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "only",
 					Usage: "repository to (re)build",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "force",
 					Usage: "force workspace to build even if remote is out of sync",
 				},
@@ -66,27 +66,27 @@ func (p *Plural) getCommands() []cli.Command {
 			Usage:     "Deploys the current workspace. This command will first sniff out git diffs in workspaces, topsort them, then apply all changes.",
 			ArgsUsage: "WKSPACE",
 			Flags: []cli.Flag{
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "silence",
 					Usage: "don't display notes for deployed apps",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "verbose",
 					Usage: "show all command output during execution",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "ignore-console",
 					Usage: "don't deploy the plural console",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "all",
 					Usage: "deploy all repos irregardless of changes",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "commit",
 					Usage: "commits your changes with this message",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "force",
 					Usage: "use force push when pushing to git",
 				},
@@ -131,7 +131,7 @@ func (p *Plural) getCommands() []cli.Command {
 			Name:  "apply",
 			Usage: "applys the current pluralfile",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "file, f",
 					Usage: "pluralfile to use",
 				},
@@ -144,7 +144,7 @@ func (p *Plural) getCommands() []cli.Command {
 			Aliases: []string{"v"},
 			Usage:   "validates your workspace",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "only",
 					Usage: "repository to (re)build",
 				},
@@ -172,15 +172,15 @@ func (p *Plural) getCommands() []cli.Command {
 			Usage:     "iterates through all installations in reverse topological order, deleting helm installations and terraform",
 			ArgsUsage: "WKSPACE",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "from",
 					Usage: "where to start your deploy command (useful when restarting interrupted destroys)",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "commit",
 					Usage: "commits your changes with this message",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "force",
 					Usage: "use force push when pushing to git",
 				},
@@ -191,11 +191,11 @@ func (p *Plural) getCommands() []cli.Command {
 			Name:  "init",
 			Usage: "initializes plural within a git repo",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "endpoint",
 					Usage: "the endpoint for the plural installation you're working with",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "service-account",
 					Usage: "email for the service account you'd like to use for this workspace",
 				},
@@ -212,11 +212,11 @@ func (p *Plural) getCommands() []cli.Command {
 			Usage:  "logs into plural and saves credentials to the current config profile",
 			Action: handleLogin,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "endpoint",
 					Usage: "the endpoint for the plural installation you're working with",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "service-account",
 					Usage: "email for the service account you'd like to use for this workspace",
 				},
@@ -337,7 +337,7 @@ func (p *Plural) getCommands() []cli.Command {
 			Aliases: []string{"tpl"},
 			Usage:   "templates a helm chart to be uploaded to plural",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "values",
 					Usage: "the values file",
 				},
